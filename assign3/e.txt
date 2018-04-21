@@ -1,0 +1,8 @@
+
+SQL> select count(ename)"TOTAL COUNT", to_char(hiredate,'YYYY') YEAR from emp gr
+oup by to_char(hiredate,'YYYY') having count(ename)=(select max(count(ename)) fr
+om emp group by to_char(hiredate,'YYYY'));
+
+TOTAL COUNT YEAR
+----------- ----
+         10 1981

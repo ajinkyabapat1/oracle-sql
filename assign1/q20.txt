@@ -1,0 +1,25 @@
+SQL> select ename,empno,decode(job,'SALESMAN','SALESPERSON') from emp;
+
+ENAME           EMPNO DECODE(JOB,                                               
+---------- ---------- -----------                                               
+SMITH            7369                                                           
+ALLEN            7499 SALESPERSON                                               
+WARD             7521 SALESPERSON                                               
+JONES            7566                                                           
+MARTIN           7654 SALESPERSON                                               
+BLAKE            7698                                                           
+CLARK            7782                                                           
+SCOTT            7788                                                           
+KING             7839                                                           
+TURNER           7844 SALESPERSON                                               
+ADAMS            7876                                                           
+
+ENAME           EMPNO DECODE(JOB,                                               
+---------- ---------- -----------                                               
+JAMES            7900                                                           
+FORD             7902                                                           
+MILLER           7934                                                           
+
+14 rows selected.
+
+SQL> spool off;

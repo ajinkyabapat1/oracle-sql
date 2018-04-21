@@ -1,0 +1,20 @@
+SQL> select ename,sal*12 'annual',comm from emp
+  2  where job='SALESMAN'and sal>nvl(comm,0)
+  3  order by sal desc,ename;
+select ename,sal*12 'annual',comm from emp
+                    *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select ename,sal*12 "annual",comm from emp
+  2  where job='SALESMAN'and sal>nvl(comm,0)
+  3  order by sal desc,ename;
+
+ENAME          annual       COMM                                                
+---------- ---------- ----------                                                
+ALLEN           19200        300                                                
+TURNER          18000          0                                                
+WARD            15000        500                                                
+
+SQL> spool off;

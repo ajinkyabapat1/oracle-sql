@@ -1,0 +1,18 @@
+SQL> select * from emp x where sal > (select avg(sal) from emp where
+  2  x.deptno=y.deptno)
+  3  
+SQL> select * from emp x where sal > (select avg(sal) from emp y where
+  2  x.deptno=y.deptno)order by deptno;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+
+6 rows selected.
+
+SQL> spool off;

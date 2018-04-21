@@ -1,0 +1,162 @@
+SQL> select * ename from emp;
+select * ename from emp
+         *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select  ename from emp;
+
+ENAME                                                                                               
+----------                                                                                          
+SMITH                                                                                               
+ALLEN                                                                                               
+WARD                                                                                                
+JONES                                                                                               
+MARTIN                                                                                              
+BLAKE                                                                                               
+CLARK                                                                                               
+SCOTT                                                                                               
+KING                                                                                                
+TURNER                                                                                              
+ADAMS                                                                                               
+
+ENAME                                                                                               
+----------                                                                                          
+JAMES                                                                                               
+FORD                                                                                                
+MILLER                                                                                              
+
+14 rows selected.
+
+SQL> select  ename from emp
+  2  where ename=TH and LL
+  3  where ename=TH and LL;
+where ename=TH and LL
+*
+ERROR at line 3:
+ORA-00920: invalid relational operator 
+
+
+SQL> select  ename from emp
+  2  where ename=TH and LL;
+where ename=TH and LL
+                    *
+ERROR at line 2:
+ORA-00920: invalid relational operator 
+
+
+SQL> where ename=TH || LL;
+SP2-0734: unknown command beginning "where enam..." - rest of line ignored.
+SQL> select  ename from emp
+  2  where ename=TH or LL;
+where ename=TH or LL
+                   *
+ERROR at line 2:
+ORA-00920: invalid relational operator 
+
+
+SQL> select  ename from emp
+  2  where ename=THLL;
+where ename=THLL
+            *
+ERROR at line 2:
+ORA-00904: "THLL": invalid identifier 
+
+
+SQL> select  ename from emp
+  2  where ename %TH% or %LL%;
+where ename %TH% or %LL%
+            *
+ERROR at line 2:
+ORA-00911: invalid character 
+
+
+SQL> where ename %TH or %LL;
+SP2-0734: unknown command beginning "where enam..." - rest of line ignored.
+SQL> select  ename from emp
+  2  where ename %TH% or %LL%;
+where ename %TH% or %LL%
+            *
+ERROR at line 2:
+ORA-00911: invalid character 
+
+
+SQL> select  ename from emp
+  2  where ename %TH or %LL;
+where ename %TH or %LL
+            *
+ERROR at line 2:
+ORA-00911: invalid character 
+
+
+SQL> select  ename from emp
+  2  where ename like '%TH% or %LL%';
+
+no rows selected
+
+SQL> where ename like '%TH%' or ename like' %LL%';
+SP2-0734: unknown command beginning "where enam..." - rest of line ignored.
+SQL> select  ename from emp
+  2  where ename like '%TH%' or ename like '%LL%';
+
+ENAME                                                                                               
+----------                                                                                          
+SMITH                                                                                               
+ALLEN                                                                                               
+MILLER                                                                                              
+
+SQL> select  ename from emp
+  2  where ename  '%TH%' or ename like' %LL%';
+where ename  '%TH%' or ename like' %LL%'
+             *
+ERROR at line 2:
+ORA-00920: invalid relational operator 
+
+
+SQL> select  ename from emp
+  2  where ename like '%TH%' or ename like '%LL%';
+
+ENAME                                                                                               
+----------                                                                                          
+SMITH                                                                                               
+ALLEN                                                                                               
+MILLER                                                                                              
+
+SQL> select  ename from emp
+  2  where ename like '%TH' or ename like' %LL';
+
+ENAME                                                                                               
+----------                                                                                          
+SMITH                                                                                               
+
+SQL> select  ename from emp
+  2  where ename like 'TH%' or ename like '%LL%';
+
+ENAME                                                                                               
+----------                                                                                          
+ALLEN                                                                                               
+MILLER                                                                                              
+
+SQL> select  ename from emp
+  2  where ename like 'TH%' or ename like' %LL';
+
+no rows selected
+
+SQL> select  ename from emp
+  2  where ename like '%TH%' or ename like' %LL%';
+
+ENAME                                                                                               
+----------                                                                                          
+SMITH                                                                                               
+
+SQL> select  ename from emp
+  2  where ename like  '%TH%' or ename like '%LL%';
+
+ENAME                                                                                               
+----------                                                                                          
+SMITH                                                                                               
+ALLEN                                                                                               
+MILLER                                                                                              
+
+SQL> spool off

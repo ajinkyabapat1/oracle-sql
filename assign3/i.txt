@@ -1,0 +1,6 @@
+
+SQL> select e1.empno,e1.ename,e1.mgr,e2.ename as manager_name
+  2  from emp e1 join emp e2
+  3  on e1.mgr=NULL;
+
+no rows selected

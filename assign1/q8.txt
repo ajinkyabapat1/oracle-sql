@@ -1,0 +1,35 @@
+SQL> select * from emp
+  2  where deptno=20 and job='clerk';
+
+no rows selected
+
+SQL> select * from emp
+  2  where job='clerk' and deptno= 20;
+
+no rows selected
+
+SQL> select * from emp
+  2  where deptno=20 and job='CLERK';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO               
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------               
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20               
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20               
+
+SQL> select ename and job from emp
+  2  where deptno=20 and job='CLERK';
+select ename and job from emp
+             *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select ename,job from emp
+  2  where deptno=20 and job='CLERK';
+
+ENAME      JOB                                                                                      
+---------- ---------                                                                                
+SMITH      CLERK                                                                                    
+ADAMS      CLERK                                                                                    
+
+SQL> spool off

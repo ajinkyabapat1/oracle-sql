@@ -1,0 +1,32 @@
+SQL> select ename,empno,round(sal*1.15,0) Incresed salary  from emp;
+select ename,empno,round(sal*1.15,0) Incresed salary  from emp
+                                              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select ename,empno,round(sal*1.15,0) Incresed_salary  from emp;
+
+ENAME           EMPNO INCRESED_SALARY                                           
+---------- ---------- ---------------                                           
+SMITH            7369            1058                                           
+ALLEN            7499            2116                                           
+WARD             7521            1653                                           
+JONES            7566            3934                                           
+MARTIN           7654            1653                                           
+BLAKE            7698            3769                                           
+CLARK            7782            3240                                           
+SCOTT            7788            3968                                           
+KING             7839            6613                                           
+TURNER           7844            1984                                           
+ADAMS            7876            1455                                           
+
+ENAME           EMPNO INCRESED_SALARY                                           
+---------- ---------- ---------------                                           
+JAMES            7900            1256                                           
+FORD             7902            3968                                           
+MILLER           7934            1719                                           
+
+14 rows selected.
+
+SQL> spool off;

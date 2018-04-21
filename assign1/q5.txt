@@ -1,0 +1,90 @@
+SQL> desc employees
+ERROR:
+ORA-04043: object employees does not exist 
+
+
+SQL> select * from department
+  2  select * from department;
+select * from department
+*
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select * from department;
+select * from department
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select * from department
+  2  
+SQL> select * from dept
+  2  select * from dept;
+select * from dept
+*
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select * from dept;
+
+    DEPTNO DNAME          LOC                                                   
+---------- -------------- -------------                                         
+        10 ACCOUNTING     NEW YORK                                              
+        20 RESEARCH       DALLAS                                                
+        30 SALES          CHICAGO                                               
+        40 OPERATIONS     BOSTON                                                
+
+SQL> select deptno,dname from dept where order by dname asc;
+select deptno,dname from dept where order by dname asc
+                                    *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> select deptno,dname from dep;
+select deptno,dname from dep
+                         *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select deptno,dname from dept;
+
+    DEPTNO DNAME                                                                
+---------- --------------                                                       
+        10 ACCOUNTING                                                           
+        20 RESEARCH                                                             
+        30 SALES                                                                
+        40 OPERATIONS                                                           
+
+SQL> select deptno,dname from dept order by dname;
+
+    DEPTNO DNAME                                                                
+---------- --------------                                                       
+        10 ACCOUNTING                                                           
+        40 OPERATIONS                                                           
+        20 RESEARCH                                                             
+        30 SALES                                                                
+
+SQL> select deptno,dname from dept order by dname asc;
+
+    DEPTNO DNAME                                                                
+---------- --------------                                                       
+        10 ACCOUNTING                                                           
+        40 OPERATIONS                                                           
+        20 RESEARCH                                                             
+        30 SALES                                                                
+
+SQL> select deptno,dname from dept order by dname desc;
+
+    DEPTNO DNAME                                                                
+---------- --------------                                                       
+        30 SALES                                                                
+        20 RESEARCH                                                             
+        40 OPERATIONS                                                           
+        10 ACCOUNTING                                                           
+
+SQL> spool off

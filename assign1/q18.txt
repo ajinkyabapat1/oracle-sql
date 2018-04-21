@@ -1,0 +1,25 @@
+SQL> select concat(concat('<',ename),'>'),concat(concat('<',job),'>') from emp;
+
+CONCAT(CONCA CONCAT(CONC                                                        
+------------ -----------                                                        
+<SMITH>      <CLERK>                                                            
+<ALLEN>      <SALESMAN>                                                         
+<WARD>       <SALESMAN>                                                         
+<JONES>      <MANAGER>                                                          
+<MARTIN>     <SALESMAN>                                                         
+<BLAKE>      <MANAGER>                                                          
+<CLARK>      <MANAGER>                                                          
+<SCOTT>      <ANALYST>                                                          
+<KING>       <PRESIDENT>                                                        
+<TURNER>     <SALESMAN>                                                         
+<ADAMS>      <CLERK>                                                            
+
+CONCAT(CONCA CONCAT(CONC                                                        
+------------ -----------                                                        
+<JAMES>      <CLERK>                                                            
+<FORD>       <ANALYST>                                                          
+<MILLER>     <CLERK>                                                            
+
+14 rows selected.
+
+SQL> spool off;

@@ -1,0 +1,10 @@
+
+SQL> select ename,empno ,job, replace ('clerk','e','a') "CHANGES" from emp  whe
+re job ='CLERK';
+
+ENAME           EMPNO JOB        CHAN
+---------- ---------- --------- -----
+SMITH            7369 CLERK     clark
+ADAMS            7876 CLERK     clark
+JAMES            7900 CLERK     clark
+MILLER           7934 CLERK     clark

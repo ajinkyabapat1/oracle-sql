@@ -1,0 +1,147 @@
+SQL> select sysdate,ADD_MONTHS(sysdate,6) from dual;
+
+SYSDATE   ADD_MONTH                                                                                                                                   
+--------- ---------                                                                                                                                   
+14-APR-18 14-OCT-18                                                                                                                                   
+
+SQL> 
+SQL> select NEXT_DAY(sysdate,'sunday') from dual;
+
+NEXT_DAY(                                                                                                                                             
+---------                                                                                                                                             
+15-APR-18                                                                                                                                             
+
+SQL> select 	sysdate,
+  2  	LAST_DAY(sysdate) "Last",
+  3  	LAST_DAY(sysdate)-sysdate "Days Left"
+  4  	from dual;
+
+SYSDATE   Last       Days Left                                                                                                                        
+--------- --------- ----------                                                                                                                        
+14-APR-18 30-APR-18         16                                                                                                                        
+
+SQL> select months_between('15-nov-03','15-oct-03') from dual;
+
+MONTHS_BETWEEN('15-NOV-03','15-OCT-03')                                                                                                               
+---------------------------------------                                                                                                               
+                                      1                                                                                                               
+
+SQL> 
+SQL> SELECT HIREDATE,LAST_DAY(ADD_MONTHS(HIREDATE,6))+2 "REVIEW" FROM EMP;
+
+HIREDATE  REVIEW                                                                                                                                      
+--------- ---------                                                                                                                                   
+17-DEC-80 02-JUL-81                                                                                                                                   
+20-FEB-81 02-SEP-81                                                                                                                                   
+22-FEB-81 02-SEP-81                                                                                                                                   
+02-APR-81 02-NOV-81                                                                                                                                   
+28-SEP-81 02-APR-82                                                                                                                                   
+01-MAY-81 02-DEC-81                                                                                                                                   
+09-JUN-81 02-JAN-82                                                                                                                                   
+19-APR-87 02-NOV-87                                                                                                                                   
+17-NOV-81 02-JUN-82                                                                                                                                   
+08-SEP-81 02-APR-82                                                                                                                                   
+23-MAY-87 02-DEC-87                                                                                                                                   
+03-DEC-81 02-JUL-82                                                                                                                                   
+03-DEC-81 02-JUL-82                                                                                                                                   
+23-JAN-82 02-AUG-82                                                                                                                                   
+
+14 rows selected.
+
+SQL> select ename, hiredate from emp
+  2  where deptno='20' as 'DATE HIRED'
+  3  
+SQL> 
+SQL> select ename, hiredate from emp
+  2  where deptno='20' as 'DATE HIRED';
+where deptno='20' as 'DATE HIRED'
+                  *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select ename, hiredate from emp
+  2  where deptno='20' 'DATE HIRED'
+  3  where deptno='20' 'DATE HIRED'
+  4  
+SQL> select ename, hiredate from emp
+  2  where deptno='20' 'DATE HIRED';
+where deptno='20' 'DATE HIRED'
+                  *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select ename, hiredate from emp
+  2  where deptno='20' "DATE HIRED";
+where deptno='20' "DATE HIRED"
+                  *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select ename, hiredate from emp
+  2  where deptno=20 as date hired;
+where deptno=20 as date hired
+                *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select ename, hiredate from emp
+  2  where deptno=20 date hired;
+where deptno=20 date hired
+                *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select ename, hiredate from emp
+  2  where deptno=20 'date hired';
+where deptno=20 'date hired'
+                *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select ename, hiredate from emp
+  2  where deptno=20 "date hired";
+where deptno=20 "date hired"
+                *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select ename, hiredate from emp
+  2  where deptno=20;
+
+ENAME      HIREDATE                                                                                                                                   
+---------- ---------                                                                                                                                  
+SMITH      17-DEC-80                                                                                                                                  
+JONES      02-APR-81                                                                                                                                  
+SCOTT      19-APR-87                                                                                                                                  
+ADAMS      23-MAY-87                                                                                                                                  
+FORD       03-DEC-81                                                                                                                                  
+
+SQL> select ename, hiredate as date hired from emp
+  2  where deptno=20;
+select ename, hiredate as date hired from emp
+                          *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select ename, hiredate "date hired" from emp
+  2  where deptno=20;
+
+ENAME      date hire                                                                                                                                  
+---------- ---------                                                                                                                                  
+SMITH      17-DEC-80                                                                                                                                  
+JONES      02-APR-81                                                                                                                                  
+SCOTT      19-APR-87                                                                                                                                  
+ADAMS      23-MAY-87                                                                                                                                  
+FORD       03-DEC-81                                                                                                                                  
+
+SQL> spool
+currently spooling to C:\DAC13-14\assign1/datefunction.txt
+SQL> spool C:\DAC13-14\assign2/q1.txt

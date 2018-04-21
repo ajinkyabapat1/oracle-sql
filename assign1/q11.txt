@@ -1,0 +1,25 @@
+SQL> select ename, sal+nvl(comm,0) "TOTAL RENUMERATION" from emp;
+
+ENAME      TOTAL RENUMERATION                                                                       
+---------- ------------------                                                                       
+SMITH                     800                                                                       
+ALLEN                    1900                                                                       
+WARD                     1750                                                                       
+JONES                    2975                                                                       
+MARTIN                   2650                                                                       
+BLAKE                    2850                                                                       
+CLARK                    2450                                                                       
+SCOTT                    3000                                                                        
+KING                     5000                                                                       
+TURNER                   1500                                                                       
+ADAMS                    1100                                                                       
+
+ENAME      TOTAL RENUMERATION                                                                       
+---------- ------------------                                                                       
+JAMES                     950                                                                       
+FORD                     3000                                                                       
+MILLER                   1300                                                                       
+
+14 rows selected.
+
+SQL> spool off

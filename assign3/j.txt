@@ -1,0 +1,17 @@
+
+SQL> select e1.ename,e1.empno,e1.hiredate,e1.mgr,e2.ename,e2.empno,e2.hiredate f
+rom emp e1,emp e2
+  2  where e1.mgr=e2.empno and e1.hiredate<e2.hiredate;
+
+ENAME           EMPNO HIREDATE         MGR ENAME           EMPNO HIREDATE
+---------- ---------- --------- ---------- ---------- ---------- ---------
+ALLEN            7499 20-FEB-81       7698 BLAKE            7698 01-MAY-81
+WARD             7521 22-FEB-81       7698 BLAKE            7698 01-MAY-81
+BLAKE            7698 01-MAY-81       7839 KING             7839 17-NOV-81
+JONES            7566 02-APR-81       7839 KING             7839 17-NOV-81
+CLARK            7782 09-JUN-81       7839 KING             7839 17-NOV-81
+SMITH            7369 17-DEC-80       7902 FORD             7902 03-DEC-81
+
+6 rows selected.
+
+SQL>

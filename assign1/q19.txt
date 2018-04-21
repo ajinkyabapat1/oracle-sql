@@ -1,0 +1,14 @@
+SQL> select ename from emp
+  2  where upper(job)=upper('&job');
+Enter value for job: clerk
+old   2: where upper(job)=upper('&job')
+new   2: where upper(job)=upper('clerk')
+
+ENAME                                                                           
+----------                                                                      
+SMITH                                                                           
+ADAMS                                                                           
+JAMES                                                                           
+MILLER                                                                          
+
+SQL> spool off;

@@ -1,0 +1,8 @@
+
+SQL> select to_char(sysdate,'Ddspth fmmonth,yyyyspth') from dual;
+
+TO_CHAR(SYSDATE,'DDSPTHFMMONTH,YYYYSPTH')
+---------------------------------------------------------------------
+Nineteenth april,two thousand eighteenth
+
+SQL>

@@ -1,0 +1,8 @@
+SQL> select ename,empno,hiredate from emp
+  2  where hiredate like '%82';
+
+ENAME           EMPNO HIREDATE                                                  
+---------- ---------- ---------                                                 
+MILLER           7934 23-JAN-82                                                 
+
+SQL> spool off;

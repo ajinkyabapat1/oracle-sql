@@ -1,0 +1,14 @@
+SQL> select * from dept where deptno not =(select deptno from emp);
+select * from dept where deptno not =(select deptno from emp)
+                                    *
+ERROR at line 1:
+ORA-00920: invalid relational operator 
+
+
+SQL> select * from dept where deptno not in(select deptno from emp);
+
+    DEPTNO DNAME          LOC                                                                                                                         
+---------- -------------- -------------                                                                                                               
+        40 OPERATIONS     BOSTON                                                                                                                      
+
+SQL> spool off;

@@ -1,0 +1,22 @@
+
+SQL> select e.ename,e.empno ,m.grade from emp e,salgrade m
+  2  where e.sal >=LOSAL and e.sal<=HISAL order by grade;
+
+ENAME           EMPNO      GRADE
+---------- ---------- ----------
+SMITH            7369          1
+JAMES            7900          1
+ADAMS            7876          1
+WARD             7521          2
+MARTIN           7654          2
+MILLER           7934          2
+TURNER           7844          3
+ALLEN            7499          3
+CLARK            7782          4
+BLAKE            7698          4
+JONES            7566          4
+SCOTT            7788          4
+FORD             7902          4
+KING             7839          5
+
+14 rows selected.

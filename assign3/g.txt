@@ -1,0 +1,22 @@
+
+SQL> select e1.empno,e1.ename,e1.mgr,e2.ename as manager_name
+  2  from emp e1,emp e2
+  3  where e1.mgr=e2.empno;
+
+     EMPNO ENAME             MGR MANAGER_NA
+---------- ---------- ---------- ----------
+      7902 FORD             7566 JONES
+      7788 SCOTT            7566 JONES
+      7844 TURNER           7698 BLAKE
+      7499 ALLEN            7698 BLAKE
+      7521 WARD             7698 BLAKE
+      7900 JAMES            7698 BLAKE
+      7654 MARTIN           7698 BLAKE
+      7934 MILLER           7782 CLARK
+      7876 ADAMS            7788 SCOTT
+      7698 BLAKE            7839 KING
+      7566 JONES            7839 KING
+      7782 CLARK            7839 KING
+      7369 SMITH            7902 FORD
+
+13 rows selected.

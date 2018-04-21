@@ -1,0 +1,7 @@
+
+SQL> select '*' NO, ename,empno from emp where hiredate = (select max(hiredate)
+from emp );
+
+N ENAME           EMPNO
+- ---------- ----------
+* ADAMS            7876

@@ -1,0 +1,28 @@
+SQL> select ename from emp
+  2  where hiredate between '&start' and '&end';
+Enter value for start: 01-feb-80
+Enter value for end: 01-feb-84
+old   2: where hiredate between '&start' and '&end'
+new   2: where hiredate between '01-feb-80' and '01-feb-84'
+
+ENAME                                                                           
+----------                                                                      
+SMITH                                                                           
+ALLEN                                                                           
+WARD                                                                            
+JONES                                                                           
+MARTIN                                                                          
+BLAKE                                                                           
+CLARK                                                                           
+KING                                                                            
+TURNER                                                                          
+JAMES                                                                           
+FORD                                                                            
+
+ENAME                                                                           
+----------                                                                      
+MILLER                                                                          
+
+12 rows selected.
+
+SQL> spool off;

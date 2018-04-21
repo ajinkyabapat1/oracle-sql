@@ -1,0 +1,11 @@
+SQL> select ename,empno ,to_char(hiredate,'MONTH DD ,YYYY') from emp where deptno=20;
+
+ENAME           EMPNO TO_CHAR(HIREDATE,'                                        
+---------- ---------- ------------------                                        
+SMITH            7369 DECEMBER  17 ,1980                                        
+JONES            7566 APRIL     02 ,1981                                        
+SCOTT            7788 APRIL     19 ,1987                                        
+ADAMS            7876 MAY       23 ,1987                                        
+FORD             7902 DECEMBER  03 ,1981                                        
+
+SQL> spool off;

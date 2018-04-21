@@ -1,0 +1,25 @@
+
+SQL>  select ename,(case when ename like 'A%' then lower(ename) end) "lower" fro
+m emp;
+
+ENAME      lower
+---------- ----------
+SMITH
+ALLEN      allen
+WARD
+JONES
+MARTIN
+BLAKE
+CLARK
+SCOTT
+KING
+TURNER
+ADAMS      adams
+
+ENAME      lower
+---------- ----------
+JAMES
+FORD
+MILLER
+
+14 rows selected.

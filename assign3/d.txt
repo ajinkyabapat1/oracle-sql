@@ -1,0 +1,9 @@
+SQL> select * from (select sal ,ename from emp order by sal desc) where rownum<=3;
+
+       SAL ENAME                                                                
+---------- ----------                                                           
+      5000 KING                                                                 
+      3000 SCOTT                                                                
+      3000 FORD                                                                 
+
+SQL> spool off;

@@ -1,0 +1,109 @@
+
+SQL> select count(*) from emp;
+
+  COUNT(*)
+----------
+        14
+
+SQL> select count(comm) from emp;
+
+COUNT(COMM)
+-----------
+          4
+
+
+===========================================================================================
+
+
+
+
+SQL> select ceil(2.3) from dual;
+
+ CEIL(2.3)                                                                      
+----------                                                                      
+         3                                                                      
+
+SQL> select floor(1.3) from dual;
+
+FLOOR(1.3)                                                                      
+----------                                                                      
+         1                                                                      
+
+SQL> select power(3,2) from dual;
+
+POWER(3,2)                                                                      
+----------                                                                      
+         9                                                                      
+
+SQL> select sqrt(36.123) from dual;
+
+SQRT(36.123)                                                                    
+------------                                                                    
+  6.01024126                                                                    
+
+SQL> select round(55.556,2) from dual;
+
+ROUND(55.556,2)                                                                 
+---------------                                                                 
+          55.56                                                                 
+
+SQL> select trunc(55.556,2) from dual;
+
+TRUNC(55.556,2)                                                                 
+---------------                                                                 
+          55.55                                                                 
+
+SQL> 
+SQL> select min(sal),max(sal),avg(sal),sum(sal) from emp;
+
+  MIN(SAL)   MAX(SAL)   AVG(SAL)   SUM(SAL)                                     
+---------- ---------- ---------- ----------                                     
+       800       5000 2073.21429      29025                                     
+
+SQL> select count(comm) from emp;
+
+COUNT(COMM)                                                                     
+-----------                                                                     
+          4                                                                     
+
+SQL> 
+SQL> select count(*) from emp;
+
+  COUNT(*)                                                                      
+----------                                                                      
+        14                                                                      
+
+SQL> select count(distinct job),count(comm),count(*) from emp
+  2  
+SQL> select count(distinct job),count(comm),count(*) from emp;
+
+COUNT(DISTINCTJOB) COUNT(COMM)   COUNT(*)                                       
+------------------ ----------- ----------                                       
+                 5           4         14                                       
+
+SQL> 
+SQL> select sal,comm,greatest(sal,nvl(comm,0)) from emp;
+
+       SAL       COMM GREATEST(SAL,NVL(COMM,0))                                 
+---------- ---------- -------------------------                                 
+       800                                  800                                 
+      1600        300                      1600                                 
+      1250        500                      1250                                 
+      2975                                 2975                                 
+      1250       1400                      1400                                 
+      2850                                 2850                                 
+      2450                                 2450                                 
+      3000                                 3000                                 
+      5000                                 5000                                 
+      1500          0                      1500                                 
+      1100                                 1100                                 
+
+       SAL       COMM GREATEST(SAL,NVL(COMM,0))                                 
+---------- ---------- -------------------------                                 
+       950                                  950                                 
+      3000                                 3000                                 
+      1300                                 1300                                 
+
+14 rows selected.
+
+SQL> spool off;

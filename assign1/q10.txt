@@ -1,0 +1,39 @@
+SQL> select job from emp
+  2  where
+  3  
+SQL> select mgr from emp
+  2  where empno=
+  3  
+SQL> select ename from emp
+  2  where mgr=7566,7698,7782;
+where mgr=7566,7698,7782
+              *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select ename from emp
+  2  where mgr=7566 or 7698 or 7782;
+where mgr=7566 or 7698 or 7782
+                       *
+ERROR at line 2:
+ORA-00920: invalid relational operator 
+
+
+SQL> select ename from emp
+  2  where mgr=7566 or mgr=7698 or mgr=7782;
+
+ENAME                                                                                               
+----------                                                                                          
+ALLEN                                                                                               
+WARD                                                                                                
+MARTIN                                                                                              
+SCOTT                                                                                               
+TURNER                                                                                              
+JAMES                                                                                               
+FORD                                                                                                
+MILLER                                                                                              
+
+8 rows selected.
+
+SQL> spool off

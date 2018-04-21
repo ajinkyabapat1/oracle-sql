@@ -1,0 +1,19 @@
+SQL> select dname drom dept
+  2  
+SQL> select dname drom dept;
+select dname drom dept
+                  *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select dname from dept;
+
+DNAME                                                                           
+--------------                                                                  
+ACCOUNTING                                                                      
+RESEARCH                                                                        
+SALES                                                                           
+OPERATIONS                                                                      
+
+SQL> spool off

@@ -1,0 +1,25 @@
+ SQL> select concat(concat(ename, 'is a '),job) from emp;
+
+CONCAT(CONCAT(ENAME,'ISA                                                        
+------------------------                                                        
+SMITHis a CLERK                                                                 
+ALLENis a SALESMAN                                                              
+WARDis a SALESMAN                                                               
+JONESis a MANAGER                                                               
+MARTINis a SALESMAN                                                             
+BLAKEis a MANAGER                                                               
+CLARKis a MANAGER                                                               
+SCOTTis a ANALYST                                                               
+KINGis a PRESIDENT                                                              
+TURNERis a SALESMAN                                                             
+ADAMSis a CLERK                                                                 
+
+CONCAT(CONCAT(ENAME,'ISA                                                        
+------------------------                                                        
+JAMESis a CLERK                                                                 
+FORDis a ANALYST                                                                
+MILLERis a CLERK                                                                
+
+14 rows selected.
+
+SQL> spool off;
