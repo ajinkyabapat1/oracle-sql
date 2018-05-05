@@ -1,0 +1,6 @@
+
+SQL> select replace('HELLO_THERE_','_','!')from dual;
+
+REPLACE('HEL
+------------
+HELLO!THERE!

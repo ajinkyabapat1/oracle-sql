@@ -1,0 +1,8 @@
+SQL> select ename,empno,sal,grade from emp,salgrade where grade='3' and sal>LOSAL and sal<HISAL;
+
+ENAME           EMPNO        SAL      GRADE                                     
+---------- ---------- ---------- ----------                                     
+ALLEN            7499       1600          3                                     
+TURNER           7844       1500          3                                     
+
+SQL> spool off;

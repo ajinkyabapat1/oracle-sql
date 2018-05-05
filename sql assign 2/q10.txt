@@ -1,0 +1,14 @@
+
+SQL> select job,avg(sal),sum(sal+nvl(comm,0)) from emp
+  2  group by job;
+
+JOB         AVG(SAL) SUM(SAL+NVL(COMM,0))
+--------- ---------- --------------------
+CLERK         1037.5                 4150
+SALESMAN        1400                 7800
+PRESIDENT       5000                 5000
+MANAGER   2758.33333                 8275
+ANALYST         3000                 6000
+
+SQL>
+

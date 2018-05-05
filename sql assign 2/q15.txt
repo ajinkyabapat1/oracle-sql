@@ -1,0 +1,25 @@
+SQL> select ename,job from emp order by job;
+
+ENAME      JOB                                                                  
+---------- ---------                                                            
+SCOTT      ANALYST                                                              
+FORD       ANALYST                                                              
+MILLER     CLERK                                                                
+JAMES      CLERK                                                                
+SMITH      CLERK                                                                
+ADAMS      CLERK                                                                
+BLAKE      MANAGER                                                              
+JONES      MANAGER                                                              
+CLARK      MANAGER                                                              
+KING       PRESIDENT                                                            
+TURNER     SALESMAN                                                             
+
+ENAME      JOB                                                                  
+---------- ---------                                                            
+MARTIN     SALESMAN                                                             
+WARD       SALESMAN                                                             
+ALLEN      SALESMAN                                                             
+
+14 rows selected.
+
+SQL> spool off;

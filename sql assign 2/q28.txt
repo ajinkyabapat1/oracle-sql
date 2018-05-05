@@ -1,0 +1,7 @@
+SQL> select round(sqrt(36.111),0) from dual;
+
+ROUND(SQRT(36.111),0)                                                           
+---------------------                                                           
+                    6                                                           
+
+SQL> spool off;

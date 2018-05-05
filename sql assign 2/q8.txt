@@ -1,0 +1,11 @@
+SQL> select job,min(sal),max(sal) from emp group by job;
+
+JOB         MIN(SAL)   MAX(SAL)                                                                                                                       
+--------- ---------- ----------                                                                                                                       
+CLERK            800       1300                                                                                                                       
+SALESMAN        1250       1600                                                                                                                       
+PRESIDENT       5000       5000                                                                                                                       
+MANAGER         2450       2975                                                                                                                       
+ANALYST         3000       3000                                                                                                                       
+
+SQL> spool off;

@@ -1,0 +1,12 @@
+SQL> select ename,empno,sal,loc from emp,dept
+  2  where loc='DALLAS' and emp.deptno=dept.deptno;
+
+ENAME           EMPNO        SAL LOC                                            
+---------- ---------- ---------- -------------                                  
+JONES            7566       2975 DALLAS                                         
+FORD             7902       3000 DALLAS                                         
+ADAMS            7876       1100 DALLAS                                         
+SMITH            7369        800 DALLAS                                         
+SCOTT            7788       3000 DALLAS                                         
+
+SQL> spool off;

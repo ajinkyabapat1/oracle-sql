@@ -1,0 +1,9 @@
+
+
+SQL> select ename ,empno ,sal from emp where sal>1000 and sal=(select min(sal)fr
+om emp where job='MANAGER')order by sal;
+
+ENAME           EMPNO        SAL
+---------- ---------- ----------
+CLARK            7782       2450
+

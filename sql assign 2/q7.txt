@@ -1,0 +1,7 @@
+SQL> select min(sal),max(sal),avg(sal),sum(sal) from emp;
+
+  MIN(SAL)   MAX(SAL)   AVG(SAL)   SUM(SAL)                                                                                                           
+---------- ---------- ---------- ----------                                                                                                           
+       800       5000 2073.21429      29025                                                                                                           
+
+SQL> spool off;

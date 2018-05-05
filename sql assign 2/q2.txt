@@ -1,0 +1,64 @@
+SQL> SELECT HIREDATE,LAST_DAY(ADD_MONTHS(HIREDATE,6))+2 "REVIEW" FROM EMP;
+
+HIREDATE  REVIEW                                                                                                                                      
+--------- ---------                                                                                                                                   
+17-DEC-80 02-JUL-81                                                                                                                                   
+20-FEB-81 02-SEP-81                                                                                                                                   
+22-FEB-81 02-SEP-81                                                                                                                                   
+02-APR-81 02-NOV-81                                                                                                                                   
+28-SEP-81 02-APR-82                                                                                                                                   
+01-MAY-81 02-DEC-81                                                                                                                                   
+09-JUN-81 02-JAN-82                                                                                                                                   
+19-APR-87 02-NOV-87                                                                                                                                   
+17-NOV-81 02-JUN-82                                                                                                                                   
+08-SEP-81 02-APR-82                                                                                                                                   
+23-MAY-87 02-DEC-87                                                                                                                                   
+03-DEC-81 02-JUL-82                                                                                                                                   
+03-DEC-81 02-JUL-82                                                                                                                                   
+23-JAN-82 02-AUG-82                                                                                                                                   
+
+14 rows selected.
+
+SQL> SELECT ename, HIREDATE,LAST_DAY(ADD_MONTHS(HIREDATE,6))+2 "REVIEW" FROM EMP;
+
+ENAME      HIREDATE  REVIEW                                                                                                                           
+---------- --------- ---------                                                                                                                        
+SMITH      17-DEC-80 02-JUL-81                                                                                                                        
+ALLEN      20-FEB-81 02-SEP-81                                                                                                                        
+WARD       22-FEB-81 02-SEP-81                                                                                                                        
+JONES      02-APR-81 02-NOV-81                                                                                                                        
+MARTIN     28-SEP-81 02-APR-82                                                                                                                        
+BLAKE      01-MAY-81 02-DEC-81                                                                                                                        
+CLARK      09-JUN-81 02-JAN-82                                                                                                                        
+SCOTT      19-APR-87 02-NOV-87                                                                                                                        
+KING       17-NOV-81 02-JUN-82                                                                                                                        
+TURNER     08-SEP-81 02-APR-82                                                                                                                        
+ADAMS      23-MAY-87 02-DEC-87                                                                                                                        
+JAMES      03-DEC-81 02-JUL-82                                                                                                                        
+FORD       03-DEC-81 02-JUL-82                                                                                                                        
+MILLER     23-JAN-82 02-AUG-82                                                                                                                        
+
+14 rows selected.
+
+SQL> SELECT ename, HIREDATE,LAST_DAY(ADD_MONTHS(HIREDATE,12))+1 "REVIEW" FROM EMP;
+
+ENAME      HIREDATE  REVIEW                                                                                                                           
+---------- --------- ---------                                                                                                                        
+SMITH      17-DEC-80 01-JAN-82                                                                                                                        
+ALLEN      20-FEB-81 01-MAR-82                                                                                                                        
+WARD       22-FEB-81 01-MAR-82                                                                                                                        
+JONES      02-APR-81 01-MAY-82                                                                                                                        
+MARTIN     28-SEP-81 01-OCT-82                                                                                                                        
+BLAKE      01-MAY-81 01-JUN-82                                                                                                                        
+CLARK      09-JUN-81 01-JUL-82                                                                                                                        
+SCOTT      19-APR-87 01-MAY-88                                                                                                                        
+KING       17-NOV-81 01-DEC-82                                                                                                                        
+TURNER     08-SEP-81 01-OCT-82                                                                                                                        
+ADAMS      23-MAY-87 01-JUN-88                                                                                                                        
+JAMES      03-DEC-81 01-JAN-83                                                                                                                        
+FORD       03-DEC-81 01-JAN-83                                                                                                                        
+MILLER     23-JAN-82 01-FEB-83                                                                                                                        
+
+14 rows selected.
+
+SQL> spool off;

@@ -1,0 +1,88 @@
+SQL> select ename,sal "SALARY ANANLYSIS",
+  2  case when sal<1500 then 'BELOW 1500'
+  3  when sal=1500 then 'ON TARGET' end from emp;
+
+ENAME      SALARY ANANLYSIS CASEWHENSA                                                                                                                
+---------- ---------------- ----------                                                                                                                
+SMITH                   800 BELOW 1500                                                                                                                
+ALLEN                  1600                                                                                                                           
+WARD                   1250 BELOW 1500                                                                                                                
+JONES                  2975                                                                                                                           
+MARTIN                 1250 BELOW 1500                                                                                                                
+BLAKE                  2850                                                                                                                           
+CLARK                  2450                                                                                                                           
+SCOTT                  3000                                                                                                                           
+KING                   5000                                                                                                                           
+TURNER                 1500 ON TARGET                                                                                                                 
+ADAMS                  1100 BELOW 1500                                                                                                                
+JAMES                   950 BELOW 1500                                                                                                                
+FORD                   3000                                                                                                                           
+MILLER                 1300 BELOW 1500                                                                                                                
+
+14 rows selected.
+
+SQL> select ename "SALARY ANANLYSIS",
+  2  case when sal<1500 then 'BELOW 1500'
+  3  when sal=1500 then 'ON TARGET' end from emp;
+
+SALARY ANA CASEWHENSA                                                                                                                                 
+---------- ----------                                                                                                                                 
+SMITH      BELOW 1500                                                                                                                                 
+ALLEN                                                                                                                                                 
+WARD       BELOW 1500                                                                                                                                 
+JONES                                                                                                                                                 
+MARTIN     BELOW 1500                                                                                                                                 
+BLAKE                                                                                                                                                 
+CLARK                                                                                                                                                 
+SCOTT                                                                                                                                                 
+KING                                                                                                                                                  
+TURNER     ON TARGET                                                                                                                                  
+ADAMS      BELOW 1500                                                                                                                                 
+JAMES      BELOW 1500                                                                                                                                 
+FORD                                                                                                                                                  
+MILLER     BELOW 1500                                                                                                                                 
+
+14 rows selected.
+
+SQL> select ename "SALARY ANANLYSIS",
+  2  case when sal<1500 then 'BELOW 1500'
+  3  when sal=1500 then 'ON TARGET'else sal end from emp;
+when sal=1500 then 'ON TARGET'else sal end from emp
+                                   *
+ERROR at line 3:
+ORA-00932: inconsistent datatypes: expected CHAR got NUMBER 
+
+
+SQL> select ename,sal,
+  2  case when sal<1500 then 'BELOW 1500'
+  3  when sal=1500 then 'ON TARGET' end as SALARY ANALYSIS from emp;
+when sal=1500 then 'ON TARGET' end as SALARY ANALYSIS from emp
+                                             *
+ERROR at line 3:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select ename, sal,
+  2  case  when sal<1500 then 'BELOW TARGET'
+  3  when sal=1500 then 'ON TARGET'end as ANALYSIS from emp;
+
+ENAME             SAL ANALYSIS                                                                                                                        
+---------- ---------- ------------                                                                                                                    
+SMITH             800 BELOW TARGET                                                                                                                    
+ALLEN            1600                                                                                                                                 
+WARD             1250 BELOW TARGET                                                                                                                    
+JONES            2975                                                                                                                                 
+MARTIN           1250 BELOW TARGET                                                                                                                    
+BLAKE            2850                                                                                                                                 
+CLARK            2450                                                                                                                                 
+SCOTT            3000                                                                                                                                 
+KING             5000                                                                                                                                 
+TURNER           1500 ON TARGET                                                                                                                       
+ADAMS            1100 BELOW TARGET                                                                                                                    
+JAMES             950 BELOW TARGET                                                                                                                    
+FORD             3000                                                                                                                                 
+MILLER           1300 BELOW TARGET                                                                                                                    
+
+14 rows selected.
+
+SQL> spool off;

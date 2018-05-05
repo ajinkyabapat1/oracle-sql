@@ -1,0 +1,7 @@
+             4200
+
+SQL> select max(sal) - min(sal) "DIFFERENCE " from emp;
+
+DIFFERENCE
+-----------
+       4200

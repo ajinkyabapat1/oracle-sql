@@ -1,0 +1,9 @@
+
+SQL> select to_char(to_date('&date','DD/MM/YYYY'),'Day')from dual;
+Enter value for date: 18/04/1991
+old   1: select to_char(to_date('&date','DD/MM/YYYY'),'Day')from dual
+new   1: select to_char(to_date('18/04/1991','DD/MM/YYYY'),'Day')from dual
+
+TO_CHAR
+---------
+Thursday

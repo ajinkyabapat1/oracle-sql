@@ -1,0 +1,50 @@
+SQL> select ename, loc,deptno from emp,dept
+  2  where emp.deptno=dept.deptno;
+select ename, loc,deptno from emp,dept
+                  *
+ERROR at line 1:
+ORA-00918: column ambiguously defined 
+
+
+SQL> select ename, loc,deptno from emp,dept
+  2  where emp.deptno=dept.deptno;
+select ename, loc,deptno from emp,dept
+                  *
+ERROR at line 1:
+ORA-00918: column ambiguously defined 
+
+
+SQL> select ename,loc,deptno from emp,dept
+  2  where emp.deptno=dept.deptno;
+select ename,loc,deptno from emp,dept
+                 *
+ERROR at line 1:
+ORA-00918: column ambiguously defined 
+
+
+SQL> select ename, loc,dname from emp,dept
+  2  where emp.deptno=dept.deptno;
+
+ENAME      LOC           DNAME                                                  
+---------- ------------- --------------                                         
+CLARK      NEW YORK      ACCOUNTING                                             
+KING       NEW YORK      ACCOUNTING                                             
+MILLER     NEW YORK      ACCOUNTING                                             
+JONES      DALLAS        RESEARCH                                               
+FORD       DALLAS        RESEARCH                                               
+ADAMS      DALLAS        RESEARCH                                               
+SMITH      DALLAS        RESEARCH                                               
+SCOTT      DALLAS        RESEARCH                                               
+WARD       CHICAGO       SALES                                                  
+TURNER     CHICAGO       SALES                                                  
+ALLEN      CHICAGO       SALES                                                  
+
+ENAME      LOC           DNAME                                                  
+---------- ------------- --------------                                         
+JAMES      CHICAGO       SALES                                                  
+BLAKE      CHICAGO       SALES                                                  
+MARTIN     CHICAGO       SALES                                                  
+
+14 rows selected.
+
+SQL> spool off;

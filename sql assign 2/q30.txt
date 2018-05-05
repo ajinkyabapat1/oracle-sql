@@ -1,0 +1,6 @@
+
+SQL> select length('CDAC, HYDERBAD') from dual;
+
+LENGTH('CDAC,HYDERBAD')
+-----------------------
+                     14

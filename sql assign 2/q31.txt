@@ -1,0 +1,16 @@
+
+SQL> select empno,ename,job from emp
+  2  where to_char(hiredate,'MM') <= 06 and to_char(hiredate,'YY') or
+  3  to_char(hiredate,'MM'
+  4
+SQL> select empno,ename,job from emp
+  2  where to_char(hiredate,'MM') <= 06 and to_char(hiredate,'YY')=80 or
+  3  to_char(hiredate,'MM') <= 06 and to_char(hiredate,'YY')=81;
+
+     EMPNO ENAME      JOB
+---------- ---------- ---------
+      7499 ALLEN      SALESMAN
+      7521 WARD       SALESMAN
+      7566 JONES      MANAGER
+      7698 BLAKE      MANAGER
+      7782 CLARK      MANAGER

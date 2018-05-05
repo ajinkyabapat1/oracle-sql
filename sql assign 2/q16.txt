@@ -1,0 +1,79 @@
+SQL> select ename,emp.deptno,dname from emp,dept order by deptno;
+
+ENAME          DEPTNO DNAME                                                     
+---------- ---------- --------------                                            
+CLARK              10 RESEARCH                                                  
+CLARK              10 ACCOUNTING                                                
+KING               10 RESEARCH                                                  
+MILLER             10 RESEARCH                                                  
+MILLER             10 SALES                                                     
+CLARK              10 SALES                                                     
+CLARK              10 OPERATIONS                                                
+KING               10 OPERATIONS                                                
+KING               10 ACCOUNTING                                                
+KING               10 SALES                                                     
+MILLER             10 OPERATIONS                                                
+
+ENAME          DEPTNO DNAME                                                     
+---------- ---------- --------------                                            
+MILLER             10 ACCOUNTING                                                
+JONES              20 RESEARCH                                                  
+SMITH              20 RESEARCH                                                  
+FORD               20 ACCOUNTING                                                
+ADAMS              20 ACCOUNTING                                                
+SCOTT              20 ACCOUNTING                                                
+JONES              20 ACCOUNTING                                                
+SMITH              20 ACCOUNTING                                                
+FORD               20 OPERATIONS                                                
+ADAMS              20 OPERATIONS                                                
+SCOTT              20 OPERATIONS                                                
+
+ENAME          DEPTNO DNAME                                                     
+---------- ---------- --------------                                            
+JONES              20 OPERATIONS                                                
+SMITH              20 OPERATIONS                                                
+FORD               20 SALES                                                     
+ADAMS              20 SALES                                                     
+SCOTT              20 SALES                                                     
+JONES              20 SALES                                                     
+SMITH              20 SALES                                                     
+FORD               20 RESEARCH                                                  
+ADAMS              20 RESEARCH                                                  
+SCOTT              20 RESEARCH                                                  
+MARTIN             30 SALES                                                     
+
+ENAME          DEPTNO DNAME                                                     
+---------- ---------- --------------                                            
+BLAKE              30 RESEARCH                                                  
+JAMES              30 ACCOUNTING                                                
+MARTIN             30 ACCOUNTING                                                
+TURNER             30 ACCOUNTING                                                
+TURNER             30 SALES                                                     
+JAMES              30 OPERATIONS                                                
+JAMES              30 SALES                                                     
+WARD               30 ACCOUNTING                                                
+BLAKE              30 ACCOUNTING                                                
+TURNER             30 OPERATIONS                                                
+BLAKE              30 OPERATIONS                                                
+
+ENAME          DEPTNO DNAME                                                     
+---------- ---------- --------------                                            
+WARD               30 SALES                                                     
+ALLEN              30 SALES                                                     
+MARTIN             30 OPERATIONS                                                
+ALLEN              30 RESEARCH                                                  
+ALLEN              30 ACCOUNTING                                                
+JAMES              30 RESEARCH                                                  
+WARD               30 OPERATIONS                                                
+TURNER             30 RESEARCH                                                  
+WARD               30 RESEARCH                                                  
+ALLEN              30 OPERATIONS                                                
+MARTIN             30 RESEARCH                                                  
+
+ENAME          DEPTNO DNAME                                                     
+---------- ---------- --------------                                            
+BLAKE              30 SALES                                                     
+
+56 rows selected.
+
+SQL> spool off;

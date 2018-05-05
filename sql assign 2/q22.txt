@@ -1,0 +1,18 @@
+SQL> spool off;
+SQL> select deptno from dept where deptno not in (select deptno from emp);
+
+    DEPTNO
+----------
+        40
+
+
+---------------------------------------------------------------------
+
+
+SQL> select dname from dept where deptno not in (select deptno from emp);
+
+DNAME                                                                                                                                                 
+--------------                                                                                                                                        
+OPERATIONS                                                                                                                                            
+
+SQL> spool off;

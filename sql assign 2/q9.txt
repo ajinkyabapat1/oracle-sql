@@ -1,0 +1,7 @@
+
+SQL> select count (job) from emp
+  2  where job='MANAGER';
+
+COUNT(JOB)
+----------
+         3

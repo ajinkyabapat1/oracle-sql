@@ -1,0 +1,7 @@
+SQL> select min(sal) from emp;
+
+  MIN(SAL)                                                                                                                                            
+----------                                                                                                                                            
+       800                                                                                                                                            
+
+SQL> spool off;

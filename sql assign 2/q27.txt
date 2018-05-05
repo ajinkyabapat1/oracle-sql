@@ -1,0 +1,9 @@
+SQL> select deptno, count(deptno),sum(sal) TOTAL_SALARY, avg(sal) AVERAGE from emp group by deptno;
+
+    DEPTNO COUNT(DEPTNO) TOTAL_SALARY    AVERAGE                                
+---------- ------------- ------------ ----------                                
+        30             6         9400 1566.66667                                
+        20             5        10875       2175                                
+        10             3         8750 2916.66667                                
+
+SQL> spool off;

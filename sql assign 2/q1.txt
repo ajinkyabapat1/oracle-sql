@@ -1,0 +1,73 @@
+SQL> select ename, hiredate "DATE HIRED" from emp
+  2  where deptno=20;
+
+ENAME      DATE HIRE                                                                                                                                  
+---------- ---------                                                                                                                                  
+SMITH      17-DEC-80                                                                                                                                  
+JONES      02-APR-81                                                                                                                                  
+SCOTT      19-APR-87                                                                                                                                  
+ADAMS      23-MAY-87                                                                                                                                  
+FORD       03-DEC-81                                                                                                                                  
+
+SQL> select ename, hiredate"date hired" from emp
+  2  where deptno=20;
+
+ENAME      date hire                                                                                                                                  
+---------- ---------                                                                                                                                  
+SMITH      17-DEC-80                                                                                                                                  
+JONES      02-APR-81                                                                                                                                  
+SCOTT      19-APR-87                                                                                                                                  
+ADAMS      23-MAY-87                                                                                                                                  
+FORD       03-DEC-81                                                                                                                                  
+
+SQL> select ename, hiredate "DATEHIRED" from emp
+  2  where deptno=20;
+
+ENAME      DATEHIRED                                                                                                                                  
+---------- ---------                                                                                                                                  
+SMITH      17-DEC-80                                                                                                                                  
+JONES      02-APR-81                                                                                                                                  
+SCOTT      19-APR-87                                                                                                                                  
+ADAMS      23-MAY-87                                                                                                                                  
+FORD       03-DEC-81                                                                                                                                  
+
+SQL> select ename,hiredate "DATE HIRED" from emp
+  2  where deptno=20;
+
+ENAME      DATE HIRE                                                                                                                                  
+---------- ---------                                                                                                                                  
+SMITH      17-DEC-80                                                                                                                                  
+JONES      02-APR-81                                                                                                                                  
+SCOTT      19-APR-87                                                                                                                                  
+ADAMS      23-MAY-87                                                                                                                                  
+FORD       03-DEC-81                                                                                                                                  
+
+SQL> select ename "DATE HIRED", hiredate " " from emp
+  2  where deptno=20;
+
+DATE HIRED                                                                                                                                            
+---------- ---------                                                                                                                                  
+SMITH      17-DEC-80                                                                                                                                  
+JONES      02-APR-81                                                                                                                                  
+SCOTT      19-APR-87                                                                                                                                  
+ADAMS      23-MAY-87                                                                                                                                  
+FORD       03-DEC-81                                                                                                                                  
+
+SQL> select ename "DATE HIRED", hiredate"" from emp
+  2  where deptno=20;
+ERROR:
+ORA-01741: illegal zero-length identifier 
+
+
+SQL> select ename "DATE HIRED", hiredate " " from emp
+  2  where deptno=20;
+
+DATE HIRED                                                                                                                                            
+---------- ---------                                                                                                                                  
+SMITH      17-DEC-80                                                                                                                                  
+JONES      02-APR-81                                                                                                                                  
+SCOTT      19-APR-87                                                                                                                                  
+ADAMS      23-MAY-87                                                                                                                                  
+FORD       03-DEC-81                                                                                                                                  
+
+SQL> spool off;

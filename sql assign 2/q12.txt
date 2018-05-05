@@ -1,0 +1,10 @@
+
+
+SQL> select deptno, count(*) employee from emp
+  2  group by deptno
+  3  having count (*)>3;
+
+    DEPTNO   EMPLOYEE
+---------- ----------
+        30          6
+        20          5

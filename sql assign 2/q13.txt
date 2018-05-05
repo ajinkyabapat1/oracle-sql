@@ -1,0 +1,6 @@
+                     
+SQL> select count(deptno) -count(*) Uniqueness from emp;
+
+UNIQUENESS
+----------
+         0
